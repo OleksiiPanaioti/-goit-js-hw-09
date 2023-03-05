@@ -2,9 +2,7 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
 // Отримуємо елементи з DOM
-refs = {
-    
-}
+
 const datePicker = document.getElementById("datetime-picker");
 const startButton = document.querySelector("[data-start]");
 const daysField = document.querySelector("[data-days]");
