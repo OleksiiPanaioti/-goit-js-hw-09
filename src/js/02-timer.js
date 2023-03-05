@@ -60,24 +60,31 @@ const countdown = {
             const hours = timeComponents.hours;
             const days = timeComponents.days
 
-            if (deltaTime <= 0) {
-                // Countdown has ended
-                daysField.textContent = "00";
-                hoursField.textContent = "00";
-                minutesField.textContent = "00";
-                secondsField.textContent = "00";
-            } else if (days > 0) {
-                // Display remaining time in days
-                daysField.textContent = days.toString();
-                hoursField.textContent = pad(hours);
-                minutesField.textContent = pad(minutes);
-                secondsField.textContent = pad(seconds);
-            } else {
-                // Display remaining time in hours, minutes, and seconds
-                hoursField.textContent = hours.toString();
-                minutesField.textContent = pad(minutes);
-                secondsField.textContent = pad(seconds);
-            }
+
+            daysField.textContent = pad(days);
+            hoursField.textContent = pad(hours);
+            minutesField.textContent = pad(minutes);
+            secondsField.textContent = pad(seconds);
+            
+
+            // if (deltaTime <= 0) {
+            //     // Countdown has ended
+            //     daysField.textContent = "00";
+            //     hoursField.textContent = "00";
+            //     minutesField.textContent = "00";
+            //     secondsField.textContent = "00";
+            // } else if (days > 0) {
+            //     // Display remaining time in days
+            //     daysField.textContent = pad(days);
+            //     hoursField.textContent = pad(hours);
+            //     minutesField.textContent = pad(minutes);
+            //     secondsField.textContent = pad(seconds);
+            // } else {
+            //     // Display remaining time in hours, minutes, and seconds
+            //     hoursField.textContent = pad(hours);
+            //     minutesField.textContent = pad(minutes);
+            //     secondsField.textContent = pad(seconds);
+            // }
             
 
             
@@ -114,10 +121,6 @@ function convertMs(ms) {
 
   return { days, hours, minutes, seconds };
 }
-
-console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
-console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
 
 
 
