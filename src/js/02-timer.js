@@ -98,7 +98,6 @@ const countdown = {
 startButton.addEventListener('click', countdown.start);
 
 function pad(time) {
-
     return time.toString().padStart(2, "0");
 }
 
