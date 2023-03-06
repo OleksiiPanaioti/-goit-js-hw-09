@@ -64,27 +64,13 @@ const countdown = {
             minutesField.textContent = pad(minutes);
             secondsField.textContent = pad(seconds);
             
-
-            // if (deltaTime <= 0) {
-            //     // Countdown has ended
-            //     daysField.textContent = "00";
-            //     hoursField.textContent = "00";
-            //     minutesField.textContent = "00";
-            //     secondsField.textContent = "00";
-            // } else if (days > 0) {
-            //     // Display remaining time in days
-            //     daysField.textContent = pad(days);
-            //     hoursField.textContent = pad(hours);
-            //     minutesField.textContent = pad(minutes);
-            //     secondsField.textContent = pad(seconds);
-            // } else {
-            //     // Display remaining time in hours, minutes, and seconds
-            //     hoursField.textContent = pad(hours);
-            //     minutesField.textContent = pad(minutes);
-            //     secondsField.textContent = pad(seconds);
-            // }
-            
-
+            if (deltaTime < 1) {
+                daysField.textContent = "00";
+                hoursField.textContent = "00";
+                minutesField.textContent = "00";
+                secondsField.textContent = "00";
+            }
+      
             
         }, 1000);
 
